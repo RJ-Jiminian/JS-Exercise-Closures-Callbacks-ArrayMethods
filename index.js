@@ -53,7 +53,7 @@ function processLength(list, callback) {
 
 }
 
-processLength([]);
+
 
  /*
  * ### Challenge `processLastItem`
@@ -70,7 +70,7 @@ processLength([]);
  * should return 'barbar'.
 */
 function processLastItem(stringList,cb) {
-  return cb(stringList.pop());
+  return cb(stringList[stringList.length-1]);
     }
 
 /**
@@ -91,9 +91,8 @@ function processLastItem(stringList,cb) {
  * [2] Invoking `processSum` passing `-5`, '-1', and `(num) => num + 1000`,
  * should return 994.
 */
-function processSum(num1, num2, cb) {
-  const result cb()= num1 + num2;
-  return result;
+function processSum(num1, num2, callback) {
+  return callback(num1, num2);
 }
 
 /**
@@ -115,9 +114,14 @@ function processSum(num1, num2, cb) {
  * should return 1000.
 */
 function processProduct(num1,num2,callback) {
-  callback(x);
+  return callback(num1, num2);
 }
+// function addNumber(x,y){
+//   return x + y;
 
+// }
+
+// processProduct(2,6);
 /**
  * ### Challenge `processDuplicateFree`
  * THIS IS A STRETCH PROBLEM! ATTEMPT ONLY AFTER COMPLETING ALL NON-STRETCH CHALLENGES!
@@ -178,9 +182,15 @@ function lowerCaseStrings(/* code here */) {
  * 
  * [2] Invoking `isItAnApple` with `['a', 'b', 'c' ]` will return `[ false, false, false ]`.
 */
-function isItAnApple(/* code here */) {
-  /* code here */
+function isItAnApple(stringsArr) {
+  const returnArr = stringsArr.map(function (x){
+   if("apple"==x){return true} 
+   else{return false}
+  });
+  return returnArr;
 }
+
+
 
 /**
  * ### Challenge `removeApple`
